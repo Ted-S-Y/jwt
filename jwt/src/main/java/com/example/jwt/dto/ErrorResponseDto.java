@@ -18,8 +18,8 @@ public class ErrorResponseDto {
 	private final int status;
 	private final String message;
 	private final LocalDateTime time;
-	private String stackTrace;
-	private List<ValidationError> validErrors;
+	private String stackTrace;	// 백엔드의 정보를 노출시키는 민감정보, 개발단계에서만 반환처리
+	private List<ValidationError> validErrors;	// ValidationException 발생시, Request데이터의 validation에서 실패한 리스트
 	
 	@Data
 	@RequiredArgsConstructor
